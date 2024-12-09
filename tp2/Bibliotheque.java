@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Bibliotheque {
 	private List<Livre> livres;
-	
+
 	public Bibliotheque() {
 		setLivres(new ArrayList<Livre>());
 	}
@@ -16,9 +16,9 @@ public class Bibliotheque {
 	public void setLivres(List<Livre> livres) {
 		this.livres = livres;
 	}
-	
+
 	public void showLivresCode() {
-		for(Livre livre: livres) {
+		for (Livre livre : livres) {
 			System.out.println(livre.code());
 		}
 	}
