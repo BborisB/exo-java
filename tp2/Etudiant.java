@@ -96,13 +96,13 @@ public class Etudiant {
 	 * @return Les initiales de l'étudiant
 	 */
 	public String initiales() {
-		return String.format("%c%c", prenom.charAt(0), nom.charAt(0));
+		return String.format("%C%C", prenom.charAt(0), nom.charAt(0));
 	}
 
 	/**
 	 * @return Le trigramme de l'étudiant
 	 */
 	public String trigramme() {
-		return String.format("%c%c%c", prenom.charAt(0), nom.charAt(0), nom.charAt(nom.length() - 1));
+		return String.format("%C%C%C", prenom.charAt(0), nom.charAt(0), nom.charAt(nom.length() - 1));
 	}
 }
