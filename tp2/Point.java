@@ -1,33 +1,47 @@
 package tp2;
 
 public class Point {
-	private float x;
-	private float y;
-	private float z;
+	private double x;
+	private double y;
+	private double z;
 	
-	public Point(float x, float y, float z) {
+	public Point() {
+		this.x=this.y=this.z=0;
+	}
+	
+	public Point(double x, double y, double z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 	
-	public float getX() {
+	public double getX() {
 		return x;
 	}
-	public void setX(float x) {
+	public void setX(double x) {
 		this.x = x;
 	}
-	public float getY() {
+	public void deplacerX(double x) {
+		this.x += x;
+	}
+	public double getY() {
 		return y;
 	}
-	public void setY(float y) {
+	public void setY(double y) {
 		this.y = y;
 	}
-	public float getZ() {
+	public void deplacerY(double y) {
+		this.y += y;
+	}
+	public double getZ() {
 		return z;
 	}
-	public void setZ(float z) {
+	public void setZ(double z) {
 		this.z = z;
+	}
+
+	public void deplacerZ(double z) {
+		this.z += z;
 	}
 	
 	public static double distance(Point p1, Point p2) {
