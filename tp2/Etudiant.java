@@ -7,11 +7,19 @@ public class Etudiant {
 	private String nom;
 	private List<Integer> notes;
 
+	/**
+	 * Initialise un étudiant avec des valeurs par défaut.
+	 */
 	public Etudiant() {
 		this.prenom = this.nom = "";
 		this.notes = new ArrayList<Integer>();
 	}
 
+	/**
+	 * Initialise un étudiant avec un nom et un prénom.
+	 * @param prenom Le prénom de l'étudiant
+	 * @param nom Le nom de l'étudiant
+	 */
 	public Etudiant(String prenom, String nom) {
 		this.prenom = prenom;
 		this.nom = nom;
@@ -60,12 +68,20 @@ public class Etudiant {
 		this.notes = notes;
 	}
 	
+	/**
+	 * Ajoute des notes à l'étudiant
+	 * @param notes Les notes à ajouter
+	 */
 	public void ajouterNotes(int... notes) {
 		for(int note : notes) {
 			this.notes.add(note);
 		}
 	}
 
+	/**
+	 * Calcule la moyenne de l'étudiant.
+	 * @return La moyenne de l'étudiant
+	 */
 	public double moyenne() {
 		if (notes.size() > 0) {
 			double moy = 0;
@@ -76,10 +92,16 @@ public class Etudiant {
 			return 0;
 	}
 
+	/**
+	 * @return Les initiales de l'étudiant
+	 */
 	public String initiales() {
 		return String.format("%c%c", prenom.charAt(0), nom.charAt(0));
 	}
 
+	/**
+	 * @return Le trigramme de l'étudiant
+	 */
 	public String trigramme() {
 		return String.format("%c%c%c", prenom.charAt(0), nom.charAt(0), nom.charAt(nom.length() - 1));
 	}
